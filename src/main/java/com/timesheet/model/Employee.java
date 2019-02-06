@@ -17,10 +17,7 @@ import java.math.BigDecimal;
 @Builder
 @Entity
 @Table(name = "employee")
-public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Employee extends BaseEntity {
 
     @Column(name = "first_name")
     private String firstName;
