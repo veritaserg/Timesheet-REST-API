@@ -1,19 +1,14 @@
 package com.timesheet.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "departments")
-public class Department extends BaseEntity {
+@Getter
+@Setter
+public class Department extends NamedEntity {
 
     @Column(name="name")
     private String name;

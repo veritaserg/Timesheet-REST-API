@@ -11,12 +11,11 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
+@ToString
 public class User extends BaseEntity {
 
     @Column(name = "username", length = 50, unique = true)
@@ -29,15 +28,6 @@ public class User extends BaseEntity {
     @Size(min = 4, max = 100)
     private String password;
 
-    @Column(name = "first_name")
-    @NotNull
-    @Size(min = 4, max = 50)
-    private String firstName;
-
-    @Column(name = "last_name")
-    @NotNull
-    @Size(min = 4, max = 50)
-    private String lastName;
 
     @Column(name = "last_password_reset_date")
     @Temporal(TemporalType.TIMESTAMP)
@@ -52,6 +42,11 @@ public class User extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "user_type")
     private UserType userType;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private Status status;
+
 
 
 }

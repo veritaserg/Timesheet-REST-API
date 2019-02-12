@@ -1,23 +1,18 @@
 package com.timesheet.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Entity
-@Table(name = "employee")
-public class Employee extends BaseEntity {
+@Table(name = "employees")
+@Getter
+@Setter
+public class Employee extends NamedEntity {
 
     @Column(name = "first_name")
     private String firstName;

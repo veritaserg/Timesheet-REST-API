@@ -9,13 +9,10 @@ import javax.persistence.*;
 import java.util.List;
 
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+
 @Entity
 @Table(name = "roles")
-public class Role extends BaseEntity{
+public class Role extends NamedEntity{
 
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private List<User> users;
