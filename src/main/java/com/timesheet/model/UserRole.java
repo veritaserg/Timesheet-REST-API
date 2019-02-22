@@ -1,5 +1,5 @@
 package com.timesheet.model;
 
-public enum UserType {
+public enum UserRole {
      SPECIALIST, MODERATOR, ADMIN
 }

@@ -18,7 +18,7 @@ public class Role extends NamedEntity{
     private List<User> users;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "status")
-    private Status status;
+    @Column(name = "name")
+    private UserRole userRole;
     }
 

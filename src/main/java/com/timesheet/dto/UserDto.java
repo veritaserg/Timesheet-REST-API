@@ -3,7 +3,7 @@ package com.timesheet.dto;
 import com.timesheet.model.Role;
 import com.timesheet.model.Status;
 import com.timesheet.model.User;
-import com.timesheet.model.UserType;
+import com.timesheet.model.UserRole;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,7 +34,6 @@ public class UserDto {
                 .username(user.getUsername())
                 .roles(userRoles)
                 .status(user.getStatus().name())
-                .userType(user.getUserType().name())
                 .build();
 
 
@@ -50,7 +49,6 @@ public class UserDto {
         user.setUsername(username);
         user.setRoles(userRoles);
         user.setStatus(Status.valueOf(status));
-        user.setUserType(UserType.valueOf(userType));
 
         return user;
     }
