@@ -13,6 +13,4 @@ public interface GenericService<T, ID> {
     void delete(T t);
 
     void deleteById(ID id);
-
-    boolean isExists(ID id);
-}
+  }
