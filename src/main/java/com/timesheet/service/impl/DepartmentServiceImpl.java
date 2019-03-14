@@ -4,9 +4,11 @@ import com.timesheet.model.Department;
 import com.timesheet.repository.DepartmentRepository;
 import com.timesheet.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DepartmentServiceImpl implements DepartmentService {
 
     @Autowired
