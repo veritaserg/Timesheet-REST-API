@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/veritaserg/Timesheet-REST-API.svg?branch=master)](https://travis-ci.org/veritaserg/Timesheet-REST-API)
